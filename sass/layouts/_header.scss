@@ -1,0 +1,12 @@
+.header {
+    @include text-center;
+    &_localization {
+        box-shadow: 0 0.188rem 0.188rem 0 rgba(0,0,0,0.05) inset;
+        @include flex-center;
+        color: black;
+        background-color: white;
+    } & i {
+        margin-right: 0.625rem;
+        padding-top: 1rem;
+    }
+}

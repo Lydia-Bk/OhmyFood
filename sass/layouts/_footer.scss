@@ -1,0 +1,24 @@
+footer {
+    background-color: $darkgrey;
+    padding: 2rem 2rem;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+
+    h2 {
+        font-family: "shrikhand", sans serif;
+        font-weight: 500;
+        font-size: 20px;
+        margin: 0 0 1rem 0;
+    }
+
+    p {
+        margin: 4px;
+        padding-top: 5px;
+    }
+
+    a {
+        color: white;
+        padding-left: 3px;
+    }
+}

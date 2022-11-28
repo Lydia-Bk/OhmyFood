@@ -2,9 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 body {
   margin: 0px;
   font-family: "roboto", sans-serif;
+  counter-reset: steps;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header {
@@ -39,15 +45,18 @@ body {
 .intro p {
   text-align: center;
   align-content: center;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 300;
 }
 .intro_subtitle {
   width: 80%;
   margin: auto;
   padding-top: 10px;
 }
-.intro_button {
+.intro_main {
   margin-top: 25px;
+}
+.intro_main_button {
   height: 55px;
   width: 240px;
   padding: 15px;
@@ -58,14 +67,174 @@ body {
   font-size: 16px;
   display: flex;
   justify-content: center;
-  margin-left: 21%;
+  margin: auto;
   font-weight: bold;
   box-shadow: 1px 4px 12px -3px rgba(0, 0, 0, 0.95);
   cursor: pointer;
   transition-duration: 0.25s;
 }
-.intro_button:hover {
+.intro_main_button:hover {
   transform: scale(1.02);
+}
+
+.step_title {
+  padding: 30px 35px 15px;
+}
+.step ol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 85%;
+  font-size: 15px;
+  font-weight: 700;
+}
+.step li {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 10px 15px;
+  flex-grow: 1;
+  box-shadow: 1px 4px 12px -3px rgba(0, 0, 0, 0.95);
+  cursor: pointer;
+  border-radius: 18px;
+  padding: 25px;
+  list-style-type: none;
+}
+.step li::before {
+  counter-increment: steps;
+  content: counter(steps);
+  background-color: #9356DC;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 25px;
+  left: -10px;
+}
+.step li:hover {
+  transform: scale(1.02);
+  background-color: #f2eafb;
+}
+.step li:hover i {
+  color: #9356DC;
+}
+.step li i {
+  margin-right: 10px;
+  color: #7e7e7e;
+}
+
+.cards {
+  background-color: #f6f6f6;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.cards h3 {
+  padding: 30px 10px 5px 25px;
+}
+.cards_list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.cards_list_restaurant {
+  height: 250px;
+}
+.cards_list_restaurant_image {
+  margin-left: 19px;
+  width: 90%;
+  object-fit: cover;
+  height: 190px;
+  border-radius: 10px 10px 0 0;
+}
+.cards_list_restaurant_description {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  width: 90%;
+  margin-left: 18px;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 10px;
+}
+.cards_list_restaurant_description_title {
+  width: 80%;
+}
+.cards_list_restaurant_description_heart {
+  margin: auto;
+  font-size: 25px;
+}
+.cards_list_restaurant_description_heart :hover {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.cards h4,
+.cards p {
+  margin: 5px;
+  margin-left: 15px;
+  color: black;
+}
+
+.p_description {
+  font-weight: 300;
+}
+
+.new {
+  position: relative;
+}
+
+.new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 4rem;
+  background-color: #99E2D0;
+  padding-left: 3px;
+  color: green;
+  font-size: smaller;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  right: 2rem;
+  top: 1rem;
+  font-weight: 700;
+  border-radius: 3px;
+  /*@media only screen and (min-width : 1224px) {
+      right: 15rem;
+      top: 3rem;
+  }*/
+}
+
+footer {
+  background-color: #353535;
+  padding: 2rem 2rem;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+footer h2 {
+  font-family: "shrikhand", sans serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0 0 1rem 0;
+}
+footer p {
+  margin: 4px;
+  padding-top: 5px;
+}
+footer a {
+  color: white;
+  padding-left: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */

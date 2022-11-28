@@ -1,4 +1,12 @@
 body {
     margin: 0px;
     font-family: "roboto", sans-serif;
+    counter-reset: steps;
 }
+
+a {
+    text-decoration: none;
+}
+
+
+

@@ -8,5 +8,148 @@ a {
     text-decoration: none;
 }
 
+main {
+    padding: 0 0.5rem;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    padding: 0;
+    margin: 0;
+}
 
+.loader {
+    animation: hideAnimation 0s ease-in 4s;
+    animation-fill-mode: forwards;
+    &_ajax-flipper {
+        width: 125px;
+        height: 45px;
+        /* 	border:1px solid black; */
+        /* 	border-radius: 0px 23px; */
+        display: block;
+        z-index: 11111;
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        margin: 100px auto;
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    
+        &_overlay {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 9999;
+            background-image: linear-gradient(to top, #9356DC, #FF79DA);
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+    
+        &_container {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 10000;
+            /* 	background: rgba(0, 0, 0, 0.6); */
+            background: transparent;
+    
+            &_flip-animation {
+                box-shadow: -1px 2px 7px 3px #ffa8d8;
+                -webkit-animation: rotation3D_1 1.8s infinite ease-in-out;
+                animation: rotation3D_1 1.8s infinite ease-in-out;
+            }
+    
+            &_overlap-flip-animation {
+                margin-top: 99px;
+                -webkit-animation: rotation3D_2 1.8s infinite ease-in-out;
+                animation: rotation3D_2 1.8s infinite ease-in-out;
+            }
+        }
+        
+    }
+}
+
+.ajax-flipper {
+    width: 125px;
+    height: 45px;
+    /* 	border:1px solid black; */
+    /* 	border-radius: 0px 23px; */
+    display: block;
+    z-index: 11111;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    margin: 100px auto;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.flip-animation {
+    box-shadow: -1px 2px 7px 3px #ffa8d8;
+    -webkit-animation: rotation3D_1 1.8s infinite ease-in-out;
+    animation: rotation3D_1 1.8s infinite ease-in-out;
+}
+
+.ajax-flipper-container {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+    /* 	background: rgba(0, 0, 0, 0.6); */
+    background: transparent;
+}
+
+/** ajax-flipper-container is not working in safari due to this extra overlay is required for safari. */
+.ajax-flipper-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+/* This animation overlap the the current animation of image to show the image is rotate in right way.*/
+.overlap-flip-animation {
+    margin-top: 99px;
+    -webkit-animation: rotation3D_2 1.8s infinite ease-in-out;
+    animation: rotation3D_2 1.8s infinite ease-in-out;
+} 
+
+.ajax-flip-img {
+    width: 85px;
+    height: 22px;
+    transform-origin: 41% 54%;
+    vertical-align: middle;
+    position: relative;
+    top: 25%;
+    left: 16%;
+}
+
+img.rotate-180-y {
+    left: 29%;
+    transform: rotateY(180deg);
+}
+
+.loader .loader_ajax-flipper_overlay,
+.loader .loader_ajax-flipper_container {
+    display: block;
+
+}

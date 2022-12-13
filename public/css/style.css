@@ -13,6 +13,146 @@ a {
   text-decoration: none;
 }
 
+main {
+  padding: 0 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.loader {
+  animation: hideAnimation 0s ease-in 4s;
+  animation-fill-mode: forwards;
+}
+.loader_ajax-flipper {
+  width: 125px;
+  height: 45px;
+  /* 	border:1px solid black; */
+  /* 	border-radius: 0px 23px; */
+  display: block;
+  z-index: 11111;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  margin: 100px auto;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.loader_ajax-flipper_overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.loader_ajax-flipper_container {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  /* 	background: rgba(0, 0, 0, 0.6); */
+  background: transparent;
+}
+.loader_ajax-flipper_container_flip-animation {
+  box-shadow: -1px 2px 7px 3px #ffa8d8;
+  -webkit-animation: rotation3D_1 1.8s infinite ease-in-out;
+  animation: rotation3D_1 1.8s infinite ease-in-out;
+}
+.loader_ajax-flipper_container_overlap-flip-animation {
+  margin-top: 99px;
+  -webkit-animation: rotation3D_2 1.8s infinite ease-in-out;
+  animation: rotation3D_2 1.8s infinite ease-in-out;
+}
+
+.ajax-flipper {
+  width: 125px;
+  height: 45px;
+  /* 	border:1px solid black; */
+  /* 	border-radius: 0px 23px; */
+  display: block;
+  z-index: 11111;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  margin: 100px auto;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-animation {
+  box-shadow: -1px 2px 7px 3px #ffa8d8;
+  -webkit-animation: rotation3D_1 1.8s infinite ease-in-out;
+  animation: rotation3D_1 1.8s infinite ease-in-out;
+}
+
+.ajax-flipper-container {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  /* 	background: rgba(0, 0, 0, 0.6); */
+  background: transparent;
+}
+
+/** ajax-flipper-container is not working in safari due to this extra overlay is required for safari. */
+.ajax-flipper-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+/* This animation overlap the the current animation of image to show the image is rotate in right way.*/
+.overlap-flip-animation {
+  margin-top: 99px;
+  -webkit-animation: rotation3D_2 1.8s infinite ease-in-out;
+  animation: rotation3D_2 1.8s infinite ease-in-out;
+}
+
+.ajax-flip-img {
+  width: 85px;
+  height: 22px;
+  transform-origin: 41% 54%;
+  vertical-align: middle;
+  position: relative;
+  top: 25%;
+  left: 16%;
+}
+
+img.rotate-180-y {
+  left: 29%;
+  transform: rotateY(180deg);
+}
+
+.loader .loader_ajax-flipper_overlay,
+.loader .loader_ajax-flipper_container {
+  display: block;
+}
+
 .header {
   text-align: center;
   align-content: center;
@@ -31,6 +171,9 @@ a {
 .header i {
   margin-right: 0.625rem;
   padding-top: 1rem;
+}
+.header p {
+  margin: 17px;
 }
 
 .intro {
@@ -135,6 +278,7 @@ a {
 }
 .cards h3 {
   padding: 30px 10px 5px 25px;
+  margin: 1rem;
 }
 .cards_list {
   display: flex;
@@ -235,6 +379,211 @@ footer p {
 footer a {
   color: white;
   padding-left: 3px;
+}
+
+#restau {
+  background-color: #f6f6f6;
+  width: 100%;
+}
+#restau .banner img {
+  max-width: 100%;
+  object-fit: cover;
+}
+#restau header {
+  display: flex;
+  flex-direction: row;
+}
+#restau .header_logo-restau {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#restau .header_logo-restau img {
+  width: 50%;
+}
+#restau .arrow {
+  padding: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#restau .arrow_icon {
+  font-size: 1.5rem;
+  margin-right: unset;
+  padding-top: unset;
+}
+#restau .main {
+  border-radius: 1rem 1rem 0 0;
+  margin-top: -57px;
+  position: relative;
+}
+#restau .main_container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+}
+#restau .main_container_title {
+  width: 90%;
+}
+#restau .main_container_title_text {
+  font-family: "Shrikhand", "cursive";
+}
+#restau .main_container_heart {
+  margin: auto;
+  font-size: 25px;
+}
+#restau .main_container_heart :hover {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+#restau .menu h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 15px;
+  padding-top: 26px;
+}
+#restau .menu_flex {
+  position: relative;
+}
+#restau .menu_flex > * {
+  border-radius: 1rem;
+}
+#restau .menu_flex_item {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 15px;
+  font-size: 17px;
+  height: 45px;
+  box-shadow: 1px 4px 12px -3px rgba(0, 0, 0, 0.95);
+  animation: appear 1s;
+  animation-fill-mode: both;
+  overflow: hidden;
+}
+#restau .menu_flex_item:nth-child(1) {
+  animation-delay: 100ms;
+}
+#restau .menu_flex_item:nth-child(2) {
+  animation-delay: 200ms;
+}
+#restau .menu_flex_item:nth-child(3) {
+  animation-delay: 300ms;
+}
+#restau .menu_flex_item_description p {
+  font-weight: 300;
+  font-size: 15px;
+}
+#restau .menu_flex_item_price {
+  display: flex;
+  margin-left: auto;
+  align-items: flex-end;
+}
+#restau .menu_flex_item_price_check {
+  background-color: #99E2D0;
+  padding: 1rem;
+  margin-right: -3rem;
+  width: 3rem;
+}
+#restau .menu_flex_item_price:hover .menu-item_check {
+  margin-right: 0;
+}
+#restau .menu_flex_item_price > * {
+  padding: 1rem;
+}
+#restau .menu .intro_main_button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+#restau .menu hr {
+  background-color: #99E2D0;
+  height: 2px;
+  width: 9%;
+  margin-left: 0;
+  border: none;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotation3D_1 {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(-179.9deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(-359.1deg);
+  }
+}
+@keyframes rotation3D_1 {
+  0% {
+    transform: perspective(120px) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateY(0deg);
+    background: white;
+  }
+  50% {
+    transform: perspective(120px) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateY(-179.9deg);
+    background: white;
+  }
+  100% {
+    transform: perspective(120px) rotateY(-359.1deg);
+    -webkit-transform: perspective(120px) rotateY(-359.1deg);
+    background: white;
+  }
+}
+@-webkit-keyframes rotation3D_2 {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(-179.9deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(-359.1deg);
+  }
+}
+@keyframes rotation3D_2 {
+  0% {
+    transform: perspective(120px) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateY(0deg);
+    background: white;
+    opacity: 0;
+  }
+  50% {
+    transform: perspective(120px) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateY(-179.9deg);
+    background: white;
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(120px) rotateY(-359.1deg);
+    -webkit-transform: perspective(120px) rotateY(-359.1deg);
+    background: white;
+    opacity: 0;
+  }
+}
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

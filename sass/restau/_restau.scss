@@ -1,0 +1,141 @@
+#restau {
+    background-color: $lightgrey;
+    width: 100%;
+
+    .banner img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header {
+        &_logo-restau {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            & img {
+                width: 50%;
+            }
+        }
+    }
+
+    .arrow {
+        padding: 20px;
+       font-weight: 600;
+       cursor: pointer; 
+       &_icon {
+        font-size: 1.5rem;
+        margin-right: unset; 
+        padding-top: unset;
+       }
+    }
+
+    .main {
+        border-radius: 1rem 1rem 0 0;
+        margin-top: -57px;
+        position: relative;
+
+        &_container {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 1rem;
+            border-radius: 2rem 2rem 0 0;
+            background-color: $lightgrey;
+
+            &_title {
+                width: 90%;
+
+                &_text {
+                    font-family: "Shrikhand", "cursive";
+                }
+            }
+
+            &_heart {
+                margin: auto;
+                font-size: 25px;
+                @include heart-icon;
+            }
+
+        }
+    }
+
+    .menu {
+        & h3 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 15px;
+            padding-top: 26px;
+        }
+
+        &_flex {
+            position: relative;
+
+            &>* {
+                border-radius: 1rem;
+            }
+
+            &_item {
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: 100ms * $i;
+                    } 
+                }
+                padding: 12px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-top: 15px;
+                font-size: 17px;
+                height: 45px;
+                @include box-shadow;
+                animation: appear 1s;
+                animation-fill-mode: both;
+                overflow: hidden;
+
+
+                &_description p {
+                    font-weight: 300;
+                    font-size: 15px;
+                }
+
+                &_price {
+                    display: flex;
+                    margin-left: auto;
+                    align-items: flex-end;
+                    &_check {
+                        background-color: $tertiary-color;
+                        padding: 1rem;
+                        margin-right: -3rem;
+                        width: 3rem;
+                    }
+                    &:hover .menu-item_check {
+                        margin-right: 0;
+                    }
+                    & > * {
+                        padding: 1rem;
+
+                    }
+                }
+                
+            }
+        }
+
+        .intro_main_button {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            @include transform-scale;
+        }
+
+        & hr {
+            @include green-hr;
+        }
+    }
+
+
+}

@@ -1,7 +1,15 @@
 /** Colors */
-$primary-color: #9356DC ;
+$primary-color: #9356dc ;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $grey: #7e7e7e;
 $lightgrey: #f6f6f6;
 $darkgrey: #353535;
+
+$breakpoints: (
+    desktop: 64.063rem,
+    desktop-min-small: 64.063rem,
+    desktop-max-small: 70.625rem,
+    tab-max: 64rem,
+    tab-min: 31.25rem
+);

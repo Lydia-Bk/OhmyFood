@@ -3,6 +3,11 @@
     align-content: center;
 }
 
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 @mixin flex-center {
     display: flex; 
     justify-content: center;
@@ -102,4 +107,30 @@
     width: 9%;
     margin-left: 0;
     border: none;
+}
+
+@mixin list-model {
+    border-radius: 1rem;
+    box-shadow: 1px 4px 12px -3px rgb(0 0 0 / 95%);
+    overflow: hidden;
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints,desktop)){
+        @content;
+    }
+}
+
+@mixin desktop-small {
+    @media screen and (min-width: map-get($breakpoints,desktop-min-small)) and (max-width: map-get($breakpoints,desktop-max-small)){
+        @content;
+    }
+}
+
+/*responsive-tabs*/
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints,tab-max)) and (min-width: map-get($breakpoints,tab-min)){
+        @content;
+    }
 }

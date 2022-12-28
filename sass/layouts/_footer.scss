@@ -4,6 +4,13 @@ footer {
     color: white;
     font-size: 18px;
     font-weight: 500;
+    
+    .footer {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 
     h2 {
         font-family: "shrikhand", sans serif;
@@ -20,5 +27,8 @@ footer {
     a {
         color: white;
         padding-left: 3px;
+        @include desktop {
+            padding-top: 7px;
+        }
     }
 }

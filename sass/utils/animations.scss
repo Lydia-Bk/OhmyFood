@@ -9,80 +9,53 @@
     }
 }
 
-@-webkit-keyframes rotation3D_1 {
-    0% {
-        -webkit-transform: perspective(120px)
-    }
-
-    50% {
-        -webkit-transform: perspective(120px) rotateY(-179.9deg)
-    }
-
-    100% {
-        -webkit-transform: perspective(120px) rotateY(-359.1deg)
-    }
-}
-
-@keyframes rotation3D_1 {
-    0% {
-        transform: perspective(120px) rotateY(0deg);
-        -webkit-transform: perspective(120px) rotateY(0deg);
-        background: white;
-    }
-
-    50% {
-        transform: perspective(120px)rotateY(-179.9deg);
-        -webkit-transform: perspective(120px) rotateY(-179.9deg);
-        background: white;
-    }
-
-    100% {
-        transform: perspective(120px) rotateY(-359.1deg);
-        -webkit-transform: perspective(120px) rotateY(-359.1deg);
-        background: white;
-    }
-}
-
-@-webkit-keyframes rotation3D_2 {
-    0% {
-        -webkit-transform: perspective(120px)
-    }
-
-    50% {
-        -webkit-transform: perspective(120px) rotateY(-179.9deg)
-    }
-
-    100% {
-        -webkit-transform: perspective(120px) rotateY(-359.1deg)
-    }
-}
-
-@keyframes rotation3D_2 {
-    0% {
-        transform: perspective(120px) rotateY(0deg);
-        -webkit-transform: perspective(120px) rotateY(0deg);
-        background: white;
-        opacity: 0;
-    }
-
-    50% {
-        transform: perspective(120px) rotateY(-179.9deg);
-        -webkit-transform: perspective(120px) rotateY(-179.9deg);
-        background: white;
-        opacity: 1;
-    }
-
-    100% {
-        transform: perspective(120px) rotateY(-359.1deg);
-        -webkit-transform: perspective(120px) rotateY(-359.1deg);
-        background: white;
-        opacity: 0;
-    }
-}
-
 @keyframes hideAnimation {
     to {
         visibility: hidden;
         display: none;
+    }
+}
+
+@keyframes translate-left {
+    0%{
+        transform: scaleX(0);
+        min-width: 0%;
+    }
+    
+    5%{
+        transform: scaleX(.05);
+    }
+
+    18%{
+        transform: scaleX(.18);
+    }
+
+    24%{
+        transform: scaleX(.24);
+    }
+
+    50%{
+        transform: scaleX(.50);
+    }
+
+    65%{
+        transform: scaleX(.65);
+    }
+    
+    80%{
+        transform: scaleX(.81);
+    }
+    
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

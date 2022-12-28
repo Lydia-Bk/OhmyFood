@@ -13,17 +13,7 @@
 </head>
 
 <body id="restau">
-    <div class="loader">
-        <div class="loader_ajax-flipper_overlay"></div>
-        <div class="loader_ajax-flipper_container">
-            <div class="ajax-flipper loader_ajax-flipper_container_flip-animation">
-                <img src="./public/images/ohmyfood@2x.svg" class="ajax-flip-img">
-            </div>
-            <div class="ajax-flipper loader_ajax-flipper_container_overlap-flip-animation">
-                <img src="./public/images/ohmyfood@2x.svg" class="ajax-flip-img rotate-180-y">
-            </div>
-        </div>
-    </div>
+    <div class="loading">Loading</div>
 
     <header class="header">
         <div class="arrow">
@@ -43,145 +33,161 @@
             <div class="main_container_title">
                 <h2 class="main_container_title_text">A la française</h2>
             </div>
-    
+
             <div class="main_container_heart">
                 <i class="far fa-heart"></i>
             </div>
         </div>
 
     </div>
-    
+
     <main class="menu">
         <h3>Entrées</h3>
         <hr>
-        <div class="menu_flex">
-            <div class="menu_flex_item">
-                <div class="menu_flex_item_description">
-                    <h4 class="menu_flex_item_description_title">Tartare de poulpe acidulé</h4>
-                    <p class="menu_flex_item_description_title">Aux zestes d'orange</p>
+        <div class="menu_responsive">
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Tartare de poulpe acidulé</h4>
+                    <p class="menu_item_description_title">Aux zestes d'orange</p>
                 </div>
 
-                <div class="menu_flex_item_price">
+                <div class="menu_item_price">
                     <p>25€</p>
                 </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </div>
-        </div>
 
-
-        <div class="menu_flex">
-            <div class="menu_flex_item">
-                <div class="menu_flex_item_description">
-                    <h4 class="menu_flex_item_description_title">Velouté de légumes d'antan</h4>
-                    <p class="menu_flex_item_description_title">Carotte, panais, topinambour</p>
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Velouté de légumes d'antan</h4>
+                    <p class="menu_item_description_title">Carotte, panais, topinambour</p>
                 </div>
 
-                <div class="menu_flex_item_price">
+                <div class="menu_item_price">
                     <p>35€</p>
                 </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </div>
-        </div>
 
 
-        <div class="menu_flex">
-            <div class="menu_flex_item">
-                <div class="menu_flex_item_description">
-                    <h4 class="menu_flex_item_description_title">Soupe à l'oignon</h4>
-                    <p class="menu_flex_item_description_title">Revisitée</p>
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Soupe à l'oignon</h4>
+                    <p class="menu_item_description_title">Revisitée</p>
                 </div>
 
-                <div class="menu_flex_item_price">
+                <div class="menu_item_price">
                     <p>20€</p>
                 </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </div>
         </div>
 
-        
-            <h3>Plats</h3>
-            <hr>
-            <div class="menu_flex">
-                <div class="menu_flex_item">
-                    <div class="menu_flex_item_description">
-                        <h4 class="menu_flex_item_description_title">Coquilles Saint-Jacques</h4>
-                        <p class="menu_flex_item_description_title">Accompagnées d'une purée de panais</p>
-                    </div>
-    
-                    <div class="menu_flex_item_price">
-                        <p>40€</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="menu_flex">
-                <div class="menu_flex_item">
-                    <div class="menu_flex_item_description">Magret de canard</h4>
-                        <p class="menu_flex_item_description_title">Et parmentier de pommes de terre</p>
-                    </div>
-    
-                    <div class="menu_flex_item_price">
-                        <p>35€</p>
-                    </div>
+        <h3>Plats</h3>
+        <hr>
+        <div class="menu_responsive">
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Coquilles Saint-Jacques</h4>
+                    <p class="menu_item_description_title">Accompagnées d'une purée de panais</p>
                 </div>
-            </div>
 
-            <div class="menu_flex">
-                <div class="menu_flex_item">
-                    <div class="menu_flex_item_description">
-                        <h4 class="menu_flex_item_description_title">Pigeonneau d’Ille-et-Vilaine</h4>
-                        <p class="menu_flex_item_description_title">Sur son lit de gnocchis aux légumes</p>
-                    </div>
-    
-                    <div class="menu_flex_item_price">
-                        <p>44€</p>
-                    </div>
+                <div class="menu_item_price">
+                    <p>40€</p>
+                </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </div>
 
 
-            <h3>Desserts</h3>
-            <hr>
-            <div class="menu_flex">
-                <div class="menu_flex_item">
-                    <div class="menu_flex_item_description">
-                        <h4 class="menu_flex_item_description_title">Pétales de violettes glacés</h4>
-                        <p class="menu_flex_item_description_title">Et purée de noisettes</p>
-                    </div>
-    
-                    <div class="menu_flex_item_price">
-                        <p>18€</p>
-                    </div>
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Magret de canard</h4>
+                    <p class="menu_item_description_title">Et parmentier de pommes de terre</p>
+                </div>
+
+                <div class="menu_item_price">
+                    <p>35€</p>
+                </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </div>
 
-            <div class="menu_flex">
-                <div class="menu_flex_item">
-                    <div class="menu_flex_item_description">
-                        <h4 class="menu_flex_item_description_title">Fondant au chocolat</h4>
-                        <p class="menu_flex_item_description_title">Revisité</p>
-                    </div>
-    
-                    <div class="menu_flex_item_price">
-                        <p>22€</p>
-                    </div>
+
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Pigeonneau d’Ille-et-Vilaine</h4>
+                    <p class="menu_item_description_title">Sur son lit de gnocchis aux légumes</p>
+                </div>
+
+                <div class="menu_item_price">
+                    <p>44€</p>
+                </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </div>
-
-            <div class="menu_flex">
-                <div class="menu_flex_item">
-                    <div class="menu_flex_item_description">
-                        <h4 class="menu_flex_item_description_title">Millefeuille croustillant</h4>
-                        <p class="menu_flex_item_description_title">Myrtilles et pâte d’amande</p>
-                    </div>
-    
-                    <div class="menu_flex_item_price">
-                        <p>23€</p>
-                    </div>
-                </div>
-            </div>
-
-            <button class="intro_main_button">Commander</button>
         </div>
 
-        
+
+        <h3>Desserts</h3>
+        <hr>
+        <div class="menu_responsive">
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Pétales de violettes glacés</h4>
+                    <p class="menu_item_description_title">Et purée de noisettes</p>
+                </div>
+
+                <div class="menu_item_price">
+                    <p>18€</p>
+                </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Fondant au chocolat</h4>
+                    <p class="menu_item_description_title">Revisité</p>
+                </div>
+
+                <div class="menu_item_price">
+                    <p>22€</p>
+                </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+
+            <div class="menu_item">
+                <div class="menu_item_description">
+                    <h4 class="menu_item_description_title">Millefeuille croustillant</h4>
+                    <p class="menu_item_description_title">Myrtilles et pâte d’amande</p>
+                </div>
+
+                <div class="menu_item_price">
+                    <p>23€</p>
+                </div>
+                <div class="menu_item_price_check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+        </div>
+
+        <button class="intro_main_button">Commander</button>
+
+
     </main>
 
     <footer>

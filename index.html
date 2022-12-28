@@ -12,31 +12,13 @@
 
 <body>
 
-    <!--<div class="show-loader">
-        <div class="ajax-flipper-overlay"></div>
-        <div class="ajax-flipper-container">
-      <div class="ajax-flipper flip-animation"><img src="./public/images/ohmyfood@2x.svg" class="ajax-flip-img"></div>
-      <div class="ajax-flipper overlap-flip-animation"><img src="./public/images/ohmyfood@2x.svg" class="ajax-flip-img rotate-180-y"></div>
-    </div>
-    </div>-->
+    <div class="loading">Loading</div>
 
-    <div class="loader">
-        <div class="loader_ajax-flipper_overlay"></div>
-        <div class="loader_ajax-flipper_container">
-            <div class="ajax-flipper loader_ajax-flipper_container_flip-animation">
-                <img src="./public/images/ohmyfood@2x.svg" class="ajax-flip-img">
-            </div>
-            <div class="ajax-flipper loader_ajax-flipper_container_overlap-flip-animation">
-                <img src="./public/images/ohmyfood@2x.svg" class="ajax-flip-img rotate-180-y">
-            </div>
-        </div>
-    </div>    
-
-    <header class="header">
-        <div class="header_logo">
+    <header class="header_accueil">
+        <div class="header_accueil_logo">
             <img src="./public/images/ohmyfood@2x.svg" alt="Logo OhMyFood">
         </div>
-        <div class="header_localization">
+        <div class="header_accueil_localization">
             <i class="fas fa-map-marker-alt"></i>
             <p>Paris, Belleville</p>
         </div>
@@ -62,19 +44,19 @@
 
     <section class="cards">
         <h3>Restaurants</h3>
-        <div class="cards_list new">
-            <a href="./restau/la_palette_du_gout.html" class="cards_list_restaurant">
+        <div class="cards_list">
+            <a href="./restau/la_palette_du_gout.html" class="cards_list_restaurant new">
                 <div>
-                    <img class="cards_list_restaurant_image" src="/public/images/palette-du-gout.jpg"
+                    <img class="cards_list_restaurant_image" src="./public/images/palette-du-gout.jpg"
                         alt="la palette du goût">
                 </div>
 
                 <div class="cards_list_restaurant_description">
                     <div class="cards_list_restaurant_description_title">
                         <h4>La palette du goût</h4>
-                        <span class="p_description">
+                        <div class="p_description">
                             <p>Ménilmontant</p>
-                        </span>
+                        </div>
                     </div>
                     <div class="cards_list_restaurant_description_heart">
                         <i class="far fa-heart"></i>
@@ -85,15 +67,15 @@
 
             <a href="./restau/la_note_enchantee.html" class="cards_list_restaurant new">
                 <div>
-                    <img class="cards_list_restaurant_image" src="/public/images/note-enchantée.jpg"
+                    <img class="cards_list_restaurant_image" src="/public/images/note-enchantee.jpg"
                         alt="la note enchantée">
                 </div>
                 <div class="cards_list_restaurant_description">
                     <div class="cards_list_restaurant_description_title">
                         <h4>La note enchantée</h4>
-                        <span class="p_description">
+                        <div class="p_description">
                             <p>Charonne</p>
-                        </span>
+                        </div>
                     </div>
                     <div class="cards_list_restaurant_description_heart">
                         <i class="far fa-heart"></i>
@@ -110,9 +92,9 @@
                 <div class="cards_list_restaurant_description">
                     <div class="cards_list_restaurant_description_title">
                         <h4>A la française</h4>
-                        <span class="p_description">
+                        <div class="p_description">
                             <p>Cité rouge</p>
-                        </span>
+                        </div>
                     </div>
                     <div class="cards_list_restaurant_description_heart">
                         <i class="far fa-heart"></i>
@@ -129,9 +111,9 @@
                 <div class="cards_list_restaurant_description">
                     <div class="cards_list_restaurant_description_title">
                         <h4>Le délice des sens</h4>
-                        <span class="p_description">
+                        <div class="p_description">
                             <p>Folie-Méricourt</p>
-                        </span>
+                        </div>
                     </div>
                     <div class="cards_list_restaurant_description_heart">
                         <i class="far fa-heart"></i>
@@ -144,6 +126,7 @@
     </section>
 
     <footer>
+        <div class="footer">
         <h2>ohmyfood</h2>
         <p>
             <i class="fas fa-utensils"></i>
@@ -155,6 +138,7 @@
         </p>
         <p>Mentions légales</p>
         <a href="mailto:lydia.bouberka@gmail.com">Contact</a>
+    </div>
 
     </footer>
 </body>

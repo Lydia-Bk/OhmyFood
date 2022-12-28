@@ -6,24 +6,49 @@
         font-size: 25px;
         text-align: center;
         margin: auto;
+        @include tablet {
+            font-size: 25px;
+        }
+        @include desktop {
+            font-size: 27px;
+        }
     }
 
     & p {
         @include text-center;
         font-size: 16px;
         font-weight: 300;
+        @include tablet {
+            font-size: 17px;
+        }
+        @include desktop {
+            font-size: 18px;
+        }
     }
 
     &_subtitle {
         width: 80%;
         margin: auto;
         padding-top: 10px;
+    
     }
 
     &_main {
         margin-top: 25px;
         &_button {
             @include intro_button;
+            @include tablet {
+                font-size: 19px;
+                width: 41%;
+                height: 3.8rem;
+                cursor: pointer;
+            }
+            @include desktop {
+                font-size: 18px;
+                width: 24%;
+                height: 58px;
+                cursor: pointer;
+            }
         }
 
     }

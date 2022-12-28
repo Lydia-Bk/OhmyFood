@@ -1,6 +1,16 @@
 .step {
+    margin-bottom: 3rem;
     &_title {
         padding: 30px 35px 15px;
+        @include tablet {
+            font-size: 23px;
+        }
+        @include desktop {
+            padding: 48px 35px 15px;
+            font-size: 22px;
+        }
+       
+
     }
 
     & ol {
@@ -9,10 +19,25 @@
         width: 85%;
         font-size: 15px;
         font-weight: 700;
+        @include desktop {
+            display: flex;
+            width: 93%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     & li {
         position: relative;
+        @include tablet {
+            width: 100%;
+            font-size: 18px;
+        }
+        @include desktop {
+            font-size: 16px;
+        }
+       
 
         &::before {
             @include step-design

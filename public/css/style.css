@@ -691,6 +691,14 @@ footer a {
 .menu_item_description {
   padding: 1rem;
   width: 85%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu_item_description_title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu_item_price {
   padding-bottom: 1rem;

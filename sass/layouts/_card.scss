@@ -74,6 +74,7 @@
                 &_heart {
                     margin: auto;
                     font-size: 25px;
+                    color: black;
                     @include heart-icon;
 
                     @include tablet {

@@ -114,6 +114,14 @@
     }
 
     &_item {
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms * $i;
+            }
+        }
+        animation: appear 1s;
+        animation-fill-mode: both;
+        overflow: hidden;
         margin-bottom: 1rem;
         gap: 1rem;
         @include list-model;
@@ -154,6 +162,7 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+
             &_title {
                 overflow: hidden;
                 white-space: nowrap;
@@ -205,9 +214,7 @@
             font-size: 17px;
             height: 45px;
             @include box-shadow;
-            animation: appear 1s;
-            animation-fill-mode: both;
-            overflow: hidden;
+
 
 
             &_description p {
@@ -241,10 +248,13 @@
     }
 
     .intro_main_button {
+        @include intro_button;
         margin-top: 2rem;
         margin-bottom: 2rem;
         cursor: pointer;
         @include transform-scale;
+        
+
     }
 
     & hr {
